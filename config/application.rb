@@ -18,6 +18,8 @@ Bundler.require(*Rails.groups)
 
 module PolarisReactRails
   class Application < Rails::Application
+    config.action_dispatch.default_headers['P3P'] = 'CP="Not used"'
+    config.action_dispatch.default_headers.delete('X-Frame-Options')
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.1
 
