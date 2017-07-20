@@ -16,6 +16,19 @@ Made it to all connect together somehow using the following approach:
 If you have found a better solution for it all to work together, please, contribute here!
 
 
+# Sequence of actions to repeat this project
+
+* Setup Shopify App by this manual: https://github.com/Shopify/shopify_app
+
+* Add webpacker gems to Gemfile
+```ruby
+gem 'webpacker', '~> 2.0'
+gem 'webpacker-react', "~> 0.3.1"
+```
+
+* Add Polaris React component: https://github.com/Shopify/polaris
+
+
 # Contact
 
 [maris@itissible.com](mailto:maris@itissible.com)
