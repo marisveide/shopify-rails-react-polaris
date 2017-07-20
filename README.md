@@ -1,24 +1,21 @@
-# README
+# Shopify App Scaffold
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Ruby on Rails 5.1
+* React JS
+* Polaris: https://github.com/Shopify/polaris
 
-Things you may want to cover:
+####
 
-* Ruby version
+# Solution
+Made it to all connect together somehow using the following approach:
 
-* System dependencies
+1. [webpacker gem](https://github.com/rails/webpacker)
+2. Will work only if webpack is run in non-server mode using `./bin/webpack --watch` - because otherwise UI is on separate port and Shopify cannot communicate with one or another normally.
+3. Shopify key and originDomain are taken from JS object.
 
-* Configuration
+If you have found a better solution for it all to work together, please, contribute here!
 
-* Database creation
 
-* Database initialization
+# Contact
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+[maris@itissible.com](mailto:maris@itissible.com)
