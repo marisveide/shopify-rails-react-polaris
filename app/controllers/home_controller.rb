@@ -1,5 +1,8 @@
 class HomeController < ShopifyApp::AuthenticatedController
+
   def index
-    @products = ShopifyAPI::Product.find(:all, params: { limit: 10 })
+    @shopify_key = ShopifyApp.configuration.api_key
+    @shopify_domain = "https://#{@shop_session.url}" if @shop_session
   end
+
 end

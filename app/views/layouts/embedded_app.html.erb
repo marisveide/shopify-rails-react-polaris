@@ -10,13 +10,21 @@
   </head>
 
   <body>
+
+  <%= content_tag :div,
+                  id: "hello-react",
+                  data: {
+                      message: 'Hello!',
+                      name: 'David'
+                  }.to_json do %>
+  <% end %>
+
     <div class="app-wrapper">
-      <div class="app-content" id="app">
-        <main role="main">
+      <div class="app-content">
+        <main role="main" id="app">
           <%= yield %>
         </main>
       </div>
-      <%= javascript_pack_tag('application') %>
     </div>
 
     <%= render 'layouts/flash_messages' %>
@@ -30,6 +38,8 @@
         debug: <%= Rails.env.development? ? 'true' : 'false' %>,
         forceRedirect: true
       });
+      console.log("ShopifyApp.apiKey", ShopifyApp.apiKey)
+      console.log("ShopifyApp.apiKey", ShopifyApp.shopOrigin)
     </script>
 
     <% if content_for?(:javascript) %>
@@ -37,5 +47,7 @@
         <%= yield :javascript %>
       </div>
     <% end %>
+
+    <%= javascript_pack_tag('application') %>
   </body>
 </html>
